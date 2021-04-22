@@ -6,7 +6,7 @@
 
 package cl.uchile.dcc.cc3002.yugioop.decks;
 
-import cl.uchile.dcc.cc3002.yugioop.cards.Card;
+import cl.uchile.dcc.cc3002.yugioop.cards.AbstractCard;
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -22,14 +22,14 @@ import java.util.Random;
  */
 public class Deck {
 
-  private final ArrayList<Card> cards = new ArrayList<>();
+  private final ArrayList<AbstractCard> cards = new ArrayList<>();
   private final Random rng = new Random();
 
-  public List<Card> getCards() {
+  public List<AbstractCard> getCards() {
     return List.copyOf(cards);
   }
 
-  public void addCard(Card card) {
+  public void addCard(AbstractCard card) {
     cards.add(card);
   }
 
