@@ -8,6 +8,9 @@ package cl.uchile.dcc.cc3002.yugioop.decks;
 
 import cl.uchile.dcc.cc3002.yugioop.cards.Card;
 
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
 import java.util.Random;
 
 /**
@@ -19,36 +22,19 @@ import java.util.Random;
  */
 public class Deck {
 
-  private final Card[] cards; // For simplicity, cards are represented as a String array
+  private final ArrayList<Card> cards = new ArrayList<>();
   private final Random rng = new Random();
 
-  /**
-   * Creates a new deck using an array of cards.
-   */
-  public Deck(Card[] cards) {
-    System.out.println("Called 'Deck' class' constructor");
-    this.cards = cards;
+  public List<Card> getCards() {
+    return List.copyOf(cards);
   }
 
-  public Card[] getCards() {
-    Card[] cardsCopy =
-        new Card[cards.length];
-    System.arraycopy(cards, 0,
-                     cardsCopy, 0, cards.length);
-    return cardsCopy;
-  }
-
-  protected void setCardAt(int index, Card card) {
-    cards[index] = card;
+  public void addCard(Card card) {
+    cards.add(card);
   }
 
   public void shuffle() {
-    for (int i = 0; i < cards.length; i++) {
-      int swapIdx = rng.nextInt(cards.length);
-      Card tmp = cards[swapIdx];
-      cards[swapIdx] = cards[i];
-      cards[i] = tmp;
-    }
+    Collections.shuffle(cards, rng);
   }
 }
 
