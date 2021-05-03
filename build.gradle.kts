@@ -6,6 +6,7 @@ version = "0.1-ALPHA.1"
 
 val jbAnnotationsVersion: String by project
 val junitVersion: String by project
+val commonsLangVersion: String by project
 
 plugins {
     java
@@ -20,6 +21,11 @@ dependencies {
         group = "org.jetbrains",
         name = "annotations",
         version = jbAnnotationsVersion
+    )
+    implementation(
+        group = "org.apache.commons",
+        name = "commons-lang3",
+        version = commonsLangVersion
     )
     testImplementation(
         group = "org.junit.jupiter", name = "junit-jupiter-api",

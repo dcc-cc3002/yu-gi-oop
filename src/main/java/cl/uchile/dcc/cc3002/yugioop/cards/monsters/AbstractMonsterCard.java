@@ -11,9 +11,9 @@ import cl.uchile.dcc.cc3002.yugioop.cards.AbstractCard;
  * @author <a href=mailto:ignacio.slater@ug.uchile.cl>Ignacio Slater Muñoz</a>
  */
 public abstract class AbstractMonsterCard extends AbstractCard {
-  private int level;
-  private int attack;
-  private int defense;
+  protected int level;
+  protected int attack;
+  protected int defense;
 
   protected AbstractMonsterCard(String name, int level, int attack, int defense) {
     super(name);

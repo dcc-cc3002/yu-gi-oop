@@ -8,20 +8,15 @@ package cl.uchile.dcc.cc3002.yugioop.cards;
 /**
  * @author <a href=mailto:ignacio.slater@ug.uchile.cl>Ignacio Slater Muñoz</a>
  */
-public class AbstractCard implements ICard {
-  private final String name;
+public abstract class AbstractCard implements Card {
+  protected final String name;
 
-  public AbstractCard(String name) {
+  protected AbstractCard(String name) {
     this.name = name;
   }
 
   @Override
   public String getName() {
     return name;
-  }
-
-  @Override
-  public AbstractCard copy() {
-    return new AbstractCard(name);
   }
 }
