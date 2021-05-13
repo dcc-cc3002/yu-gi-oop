@@ -53,4 +53,10 @@ public class GameMat {
   public List<BackrowCard> getBackrow() {
     return List.copyOf(backrow);
   }
+
+  public void addMonster(MonsterCard monster) {
+    if (monsters.size() < 5) {
+      monsters.add(monster);
+    }
+  }
 }

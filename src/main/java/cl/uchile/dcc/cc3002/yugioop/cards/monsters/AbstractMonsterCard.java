@@ -10,7 +10,7 @@ import cl.uchile.dcc.cc3002.yugioop.cards.AbstractCard;
 /**
  * @author <a href=mailto:ignacio.slater@ug.uchile.cl>Ignacio Slater Muñoz</a>
  */
-public abstract class AbstractMonsterCard extends AbstractCard {
+public abstract class AbstractMonsterCard extends AbstractCard implements MonsterCard {
   protected int level;
   protected int attack;
   protected int defense;
