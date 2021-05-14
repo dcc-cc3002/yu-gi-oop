@@ -3,7 +3,6 @@ package cl.uchile.dcc.cc3002.yugioop;
 import org.apache.commons.lang3.RandomStringUtils;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.RepeatedTest;
-import org.junit.jupiter.api.Test;
 
 import java.util.Random;
 
@@ -35,7 +34,9 @@ public class PlayerTest {
     assertEquals(expectedPlayer.hashCode(), player.hashCode());
     String differentName;
     do {
-      differentName = RandomStringUtils.random(rng.nextInt(20), 0, Character.MAX_CODE_POINT, true, false, null, rng);
+      differentName =
+          RandomStringUtils.random(rng.nextInt(20), 0, Character.MAX_CODE_POINT, true, false, null,
+                                   rng);
     } while (differentName.equals(name));
     var differentNamePlayer = new Player(differentName);
     assertNotEquals(differentNamePlayer, player);
