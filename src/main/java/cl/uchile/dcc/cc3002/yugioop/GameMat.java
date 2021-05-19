@@ -15,6 +15,10 @@ import java.util.List;
 import java.util.Objects;
 
 /**
+ * The mat in which the cards are played.
+ * <p>
+ * In the game, each player will have 1 mat.
+ *
  * @author <a href=mailto:ignacio.slater@ug.uchile.cl>Ignacio Slater Muñoz</a>
  */
 public class GameMat {
@@ -34,9 +38,13 @@ public class GameMat {
   @Override
   public boolean equals(Object obj) {
     if (obj instanceof GameMat) {
+      // Since we know ``obj`` is an instance of ``GameMat`` we can apply casting without problems;
+      // this is know as _safe casting_.
       var other = (GameMat) obj;
       return player.equals(other.player);
     }
+    // We are not testing this line since ``GameMat`` has no parent (beside object) so there's no
+    // ambiguity in its type (see: cards.MagicCard#equals).
     return false;
   }
 

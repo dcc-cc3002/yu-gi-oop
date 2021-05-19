@@ -19,6 +19,8 @@ import static org.junit.jupiter.api.Assertions.*;
  * @author <a href=mailto:ignacio.slater@ug.uchile.cl>Ignacio Slater Muñoz</a>
  */
 public class PlayerMatTest {
+  // The use of ``final static String`` means that the variable ``YUGI_NAME`` will not be changed,
+  // we can think of it as a constant.
   private final static String YUGI_NAME = "Yugi";
   private final static String JUDAI_NAME = "Judai";
   private GameMat mat;
@@ -27,6 +29,8 @@ public class PlayerMatTest {
 
   @BeforeEach
   void setUp() {
+    // Note that we do not use a random generator for the names since here we are testing the
+    // ``PlayerMat`` class, not the ``Player`` class.
     yugi = new Player(YUGI_NAME);
     judai = new Player(JUDAI_NAME);
     mat = new GameMat(yugi);
@@ -34,13 +38,14 @@ public class PlayerMatTest {
 
   @Test
   void constructorTest() {
+    // Basic construction of two equal objects
     var expectedMat = new GameMat(yugi);
     assertEquals(expectedMat, mat);
     assertEquals(expectedMat.hashCode(), mat.hashCode(), "Hashes don't match");
     var differentPlayerMat = new GameMat(judai);
     assertNotEquals(differentPlayerMat, mat,
                     mat.toString() + " should be different to " + differentPlayerMat.toString());
-
+    // Check for initial conditions
     assertTrue(mat.getMonsters().isEmpty(),
                "Monster zone should be empty on creation, but was " + mat.getMonsters().toString());
     assertTrue(mat.getBackrow().isEmpty(),
@@ -49,6 +54,7 @@ public class PlayerMatTest {
 
   @Test
   void monsterZoneTest() {
+    // We create an array of 6 cards; the monster zone should have __at most__ 5 cards.
     var monsters = new MonsterCard[]{
         new MainDeckMonsterCard("Armed Dragon LV3", 3, 1200, 900),
         new MainDeckMonsterCard("Armed Dragon LV5", 5, 2400, 1700),
