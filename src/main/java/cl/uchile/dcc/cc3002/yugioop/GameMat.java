@@ -13,6 +13,7 @@ import cl.uchile.dcc.cc3002.yugioop.cards.monsters.MonsterCard;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
+import java.util.stream.Collectors;
 
 /**
  * The mat in which the cards are played.
@@ -54,12 +55,25 @@ public class GameMat {
            + backrow.toString() + "\n}";
   }
 
+  /**
+   * Returns a copy of the cards on the monster zone.
+   */
   public List<MonsterCard> getMonsters() {
-    return List.copyOf(monsters);
+    // We create a new list containing a copy of each card in the monster zone
+    return monsters.stream()  // We create a stream of all cards in the monster zone
+                   .map(MonsterCard::copy)  // We apply the copy function to each card on the stream
+                   // We collect the results into a new ArrayList
+                   .collect(Collectors.toCollection(ArrayList::new));
   }
 
+  /**
+   * Returns a copy of the cards on the spell/trap zone (backrow).
+   */
   public List<BackrowCard> getBackrow() {
-    return List.copyOf(backrow);
+    // We create a new list containing a copy of each card in the backrow
+    return backrow.stream()
+                  .map(BackrowCard::copy)
+                  .collect(Collectors.toCollection(ArrayList::new));
   }
 
   public void addMonster(MonsterCard monster) {
