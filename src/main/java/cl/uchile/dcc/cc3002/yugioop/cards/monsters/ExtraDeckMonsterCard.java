@@ -13,7 +13,7 @@ public class ExtraDeckMonsterCard extends AbstractMonsterCard {
   }
 
   @Override
-  public Card copy() {
+  public ExtraDeckMonsterCard copy() {
     return new ExtraDeckMonsterCard(name, level, attack, defense);
   }
 

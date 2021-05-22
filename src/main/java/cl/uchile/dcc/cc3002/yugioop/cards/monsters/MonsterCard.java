@@ -8,8 +8,14 @@
  */
 package cl.uchile.dcc.cc3002.yugioop.cards.monsters;
 
+import cl.uchile.dcc.cc3002.yugioop.cards.Card;
+
 /**
+ * Interface comprising all types of monster cards on the game.
+ *
  * @author <a href=mailto:ignacio.slater@ug.uchile.cl>Ignacio Slater Muñoz</a>
  */
-public interface MonsterCard {
+public interface MonsterCard extends Card {
+  @Override
+  MonsterCard copy();
 }
