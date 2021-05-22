@@ -8,6 +8,8 @@
 package cl.uchile.dcc.cc3002.yugioop;
 
 import cl.uchile.dcc.cc3002.yugioop.cards.BackrowCard;
+import cl.uchile.dcc.cc3002.yugioop.cards.Card;
+import cl.uchile.dcc.cc3002.yugioop.cards.MagicCard;
 import cl.uchile.dcc.cc3002.yugioop.cards.monsters.MonsterCard;
 
 import java.util.ArrayList;
@@ -76,9 +78,26 @@ public class GameMat {
                   .collect(Collectors.toCollection(ArrayList::new));
   }
 
+  /**
+   * Adds a monster card to the monster zone.
+   *
+   * @param monster the card to be added
+   */
   public void addMonster(MonsterCard monster) {
     if (monsters.size() < 5) {
       monsters.add(monster);
+    }
+  }
+
+  /**
+   * Adds a card to the spell/trap zone.
+   *
+   * @param card
+   *    the card to be added.
+   */
+  public void addBackrow(BackrowCard card) {
+    if (backrow.size() < 5) {
+      backrow.add(card);
     }
   }
 }

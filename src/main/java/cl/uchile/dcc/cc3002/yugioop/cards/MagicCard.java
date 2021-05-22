@@ -10,7 +10,7 @@ import java.util.Objects;
 /**
  * @author <a href=mailto:ignacio.slater@ug.uchile.cl>Ignacio Slater Muñoz</a>
  */
-public class MagicCard extends AbstractCard {
+public class MagicCard extends AbstractCard implements BackrowCard {
 
   public MagicCard(String name) {
     super(name);
