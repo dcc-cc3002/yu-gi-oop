@@ -19,6 +19,9 @@ and each of the other branches illustrates a different concept.
 
 ## Table of Contents
 
+1. OOP basics
+   1. Abstract classes [lesson](https://youtu.be/IFduHVp4Y04?t=850)
+        | [src](https://github.com/CC3002-Metodologias/yu-gi-oop/tree/abstract-monster)
 1. Test Driven Development
     1. Game mat: [lesson](https://youtu.be/CUk9wSidLeU?t=93) 
        | [src](https://github.com/CC3002-Metodologias/yu-gi-oop/tree/game-mat)
