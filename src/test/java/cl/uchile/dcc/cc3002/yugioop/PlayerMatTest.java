@@ -8,7 +8,7 @@
 package cl.uchile.dcc.cc3002.yugioop;
 
 import cl.uchile.dcc.cc3002.yugioop.cards.Card;
-import cl.uchile.dcc.cc3002.yugioop.cards.MagicCard;
+import cl.uchile.dcc.cc3002.yugioop.cards.backrow.MagicCard;
 import cl.uchile.dcc.cc3002.yugioop.cards.monsters.ExtraDeckMonsterCard;
 import cl.uchile.dcc.cc3002.yugioop.cards.monsters.MainDeckMonsterCard;
 import cl.uchile.dcc.cc3002.yugioop.cards.monsters.MonsterCard;

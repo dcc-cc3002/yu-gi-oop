@@ -7,9 +7,7 @@
  */
 package cl.uchile.dcc.cc3002.yugioop;
 
-import cl.uchile.dcc.cc3002.yugioop.cards.BackrowCard;
-import cl.uchile.dcc.cc3002.yugioop.cards.Card;
-import cl.uchile.dcc.cc3002.yugioop.cards.MagicCard;
+import cl.uchile.dcc.cc3002.yugioop.cards.backrow.BackrowCard;
 import cl.uchile.dcc.cc3002.yugioop.cards.monsters.MonsterCard;
 
 import java.util.ArrayList;
