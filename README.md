@@ -25,3 +25,5 @@ and each of the other branches illustrates a different concept.
 1. Test Driven Development
     1. Game mat: [lesson](https://youtu.be/CUk9wSidLeU?t=93) 
        | [src](https://github.com/CC3002-Metodologias/yu-gi-oop/tree/game-mat)
+    2. Cards: [lesson](https://youtu.be/CUk9wSidLeU?t=2216)
+       | [src](https://github.com/CC3002-Metodologias/yu-gi-oop/tree/card-tests)
