@@ -8,6 +8,8 @@
 package cl.uchile.dcc.cc3002.yugioop.cards.monsters;
 
 import cl.uchile.dcc.cc3002.yugioop.AbstractNamedElementTest;
+import cl.uchile.dcc.cc3002.yugioop.cards.monsters.AbstractMonsterCardTest;
+import cl.uchile.dcc.cc3002.yugioop.cards.monsters.MainDeckMonsterCard;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.RepeatedTest;
 

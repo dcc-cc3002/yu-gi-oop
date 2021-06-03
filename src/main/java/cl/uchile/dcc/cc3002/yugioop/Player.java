@@ -1,5 +1,9 @@
 package cl.uchile.dcc.cc3002.yugioop;
 
+import cl.uchile.dcc.cc3002.yugioop.cards.monsters.MonsterCard;
+
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Objects;
 
 /**
@@ -8,6 +12,8 @@ import java.util.Objects;
 public class Player {
   private final String name;
   private int lifePoints = 8000;
+  private GameMat mat;
+  private final List<MonsterCard> selectedTributes = new ArrayList<>();
 
   public Player(String name) {
     this.name = name;
@@ -38,5 +44,13 @@ public class Player {
 
   public void setLifePoints(int lp) {
     this.lifePoints = lp;
+  }
+
+  public GameMat getMat() {
+    return mat;
+  }
+
+  public List<MonsterCard> getSelectedTributes() {
+    return selectedTributes;
   }
 }
