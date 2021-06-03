@@ -3,7 +3,7 @@
 // Creative Commons Attribution 4.0 International License.
 // You should have received a copy of the license along with this
 // work. If not, see <http://creativecommons.org/licenses/by/4.0/>.
-package cl.uchile.dcc.cc3002.yugioop.decks;
+package cl.uchile.dcc.cc3002.jugi.decks;
 
 /**
  * Simple implementation of the <i>Extra deck</i> from the <i>Yu-Gi-Oh!</i> game.

@@ -1,20 +1,18 @@
-package cl.uchile.dcc.cc3002.yugioop.cards.monsters;
-
-import cl.uchile.dcc.cc3002.yugioop.cards.Card;
+package cl.uchile.dcc.cc3002.jugi.cards.monsters;
 
 import java.util.Objects;
 
 /**
  * @author <a href=mailto:ignacio.slater@ug.uchile.cl>Ignacio Slater Muñoz</a>
  */
-public class ExtraDeckMonsterCard extends AbstractMonsterCard {
-  public ExtraDeckMonsterCard(String name, int level, int attack, int defense) {
+public class MainDeckMonsterCard extends AbstractMonsterCard {
+  public MainDeckMonsterCard(String name, int level, int attack, int defense) {
     super(name, level, attack, defense);
   }
 
   @Override
-  public ExtraDeckMonsterCard copy() {
-    return new ExtraDeckMonsterCard(name, level, attack, defense);
+  public MainDeckMonsterCard copy() {
+    return new MainDeckMonsterCard(name, level, attack, defense);
   }
 
   @Override
@@ -24,8 +22,8 @@ public class ExtraDeckMonsterCard extends AbstractMonsterCard {
 
   @Override
   public boolean equals(Object obj) {
-    if (obj instanceof ExtraDeckMonsterCard) {
-      var other = (ExtraDeckMonsterCard) obj;
+    if (obj instanceof MainDeckMonsterCard) {
+      var other = (MainDeckMonsterCard) obj;
       return name.equals(other.getName()) && level == other.level && attack == other.attack
              && defense == other.defense;
     }

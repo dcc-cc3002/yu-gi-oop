@@ -4,9 +4,9 @@
 // You should have received a copy of the license along with this
 // work. If not, see <http://creativecommons.org/licenses/by/4.0/>.
 
-package cl.uchile.dcc.cc3002.yugioop.decks;
+package cl.uchile.dcc.cc3002.jugi.decks;
 
-import cl.uchile.dcc.cc3002.yugioop.cards.AbstractCard;
+import cl.uchile.dcc.cc3002.jugi.cards.AbstractCard;
 
 import java.util.ArrayList;
 import java.util.Collections;

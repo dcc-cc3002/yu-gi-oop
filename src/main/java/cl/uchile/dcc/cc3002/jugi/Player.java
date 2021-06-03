@@ -1,13 +1,14 @@
-package cl.uchile.dcc.cc3002.yugioop;
+package cl.uchile.dcc.cc3002.jugi;
 
 import java.util.Objects;
 
 /**
  * @author <a href=mailto:ignacio.slater@ug.uchile.cl>Ignacio Slater Muñoz</a>
  */
-public class Player {
+public class Player implements GameEntity {
   private final String name;
   private int lifePoints = 8000;
+  private final GameMat mat = new GameMat(this);
 
   public Player(String name) {
     this.name = name;
@@ -29,7 +30,7 @@ public class Player {
 
   @Override
   public String toString() {
-    return "Player{name=" + name + '}';
+    return this.asString(0);
   }
 
   public int getLifePoints() {
@@ -38,5 +39,14 @@ public class Player {
 
   public void setLifePoints(int lp) {
     this.lifePoints = lp;
+  }
+
+  @Override
+  public String asString(int indent) {
+    return " ".repeat(indent) + "Player{\n"
+           + " ".repeat(indent + 2) + "Name: " + name + "\n"
+           + " ".repeat(indent + 2) + "Life points: " + lifePoints + "\n"
+           + mat.asString(indent + 2) + "\n"
+           + "}";
   }
 }

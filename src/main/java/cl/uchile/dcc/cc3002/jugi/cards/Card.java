@@ -1,4 +1,4 @@
-package cl.uchile.dcc.cc3002.yugioop.cards;
+package cl.uchile.dcc.cc3002.jugi.cards;
 
 /**
  * @author <a href=mailto:ignacio.slater@ug.uchile.cl>Ignacio Slater Muñoz</a>

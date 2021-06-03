@@ -1,2 +1,2 @@
-rootProject.name = "yu-gi-oop"
+rootProject.name = "Ju-Gi-Oh"
 

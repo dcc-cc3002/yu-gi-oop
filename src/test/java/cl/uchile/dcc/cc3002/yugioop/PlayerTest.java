@@ -1,5 +1,6 @@
 package cl.uchile.dcc.cc3002.yugioop;
 
+import cl.uchile.dcc.cc3002.jugi.Player;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.RepeatedTest;
 
@@ -23,6 +24,7 @@ public class PlayerTest extends AbstractNamedElementTest<Player> {
     checkEquality(expectedPlayer, player);
     var differentNamePlayer = new Player(getDifferentName());
     checkDifferentName(differentNamePlayer, player);
+    System.out.println(player.asString(0));
   }
 
   @RepeatedTest(20)
