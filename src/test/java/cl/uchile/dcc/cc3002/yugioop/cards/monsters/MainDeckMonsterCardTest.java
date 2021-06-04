@@ -7,7 +7,7 @@
  */
 package cl.uchile.dcc.cc3002.yugioop.cards.monsters;
 
-import cl.uchile.dcc.cc3002.yugioop.AbstractNamedElementTest;
+import cl.uchile.dcc.cc3002.yugioop.cards.factories.MainDeckMonsterCardFactory;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.RepeatedTest;
 
@@ -16,7 +16,7 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
 /**
  * @author <a href=mailto:ignacio.slater@ug.uchile.cl>Ignacio Slater Muñoz</a>
  */
-public class MainDeckMonsterCardTest extends AbstractMonsterCardTest<MainDeckMonsterCard> {
+public class MainDeckMonsterCardTest extends AbstractMonsterCardTest {
   private MainDeckMonsterCard card;
 
   @BeforeEach
@@ -27,19 +27,7 @@ public class MainDeckMonsterCardTest extends AbstractMonsterCardTest<MainDeckMon
 
   @RepeatedTest(16)
   void constructorTest() {
-    var expectedCard = new MainDeckMonsterCard(name, level, attack, defense);
-    checkEquality(expectedCard, card);
-    var differentCardName = new MainDeckMonsterCard(getDifferentName(), level, attack, defense);
-    checkDifferentName(differentCardName, card);
-    var differentLevelCard =
-        new MainDeckMonsterCard(name, getDifferentInt(level, 1, 12), attack, defense);
-    assertNotEquals(differentLevelCard, card);
-    var differentAttackCard =
-        new MainDeckMonsterCard(name, level, getDifferentInt(attack, 0, 5000), defense);
-    assertNotEquals(differentAttackCard, card);
-    var differentDefenseCard =
-        new MainDeckMonsterCard(name, level, attack, getDifferentInt(defense, 0, 5000));
-    assertNotEquals(differentDefenseCard, card);
+    var factory = new MainDeckMonsterCardFactory();
+    checkConstructor(factory, card);
   }
-
 }

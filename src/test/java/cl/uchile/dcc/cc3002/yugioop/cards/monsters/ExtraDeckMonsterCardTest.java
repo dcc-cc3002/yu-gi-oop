@@ -15,7 +15,7 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
 /**
  * @author <a href=mailto:ignacio.slater@ug.uchile.cl>Ignacio Slater Muñoz</a>
  */
-public class ExtraDeckMonsterCardTest extends AbstractMonsterCardTest<ExtraDeckMonsterCard> {
+public class ExtraDeckMonsterCardTest extends AbstractMonsterCardTest {
   private ExtraDeckMonsterCard card;
 
   @BeforeEach

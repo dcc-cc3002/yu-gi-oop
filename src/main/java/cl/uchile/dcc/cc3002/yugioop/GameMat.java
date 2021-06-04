@@ -22,7 +22,7 @@ import java.util.stream.Collectors;
  *
  * @author <a href=mailto:ignacio.slater@ug.uchile.cl>Ignacio Slater Muñoz</a>
  */
-public class GameMat {
+public class GameMat implements GameEntity {
   private final Player player;
   private final List<MonsterCard> monsters = new ArrayList<>();
   private final List<BackrowCard> backrow = new ArrayList<>();
@@ -97,5 +97,12 @@ public class GameMat {
     if (backrow.size() < 5) {
       backrow.add(card);
     }
+  }
+
+  public String asString(int indent) {
+    return "GameMat{\n"
+           + " ".repeat(indent + 2) + "monsters: []\n"
+           + " ".repeat(indent + 2) + "spells: []\n"
+           + " ".repeat(indent) + "}";
   }
 }

@@ -21,4 +21,9 @@ public abstract class AbstractMonsterCard extends AbstractCard implements Monste
     this.attack = attack;
     this.defense = defense;
   }
+
+  @Override
+  public void tribute() {
+
+  }
 }
