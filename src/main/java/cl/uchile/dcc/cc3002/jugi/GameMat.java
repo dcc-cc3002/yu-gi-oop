@@ -5,10 +5,11 @@
  * You should have received a copy of the license along with this
  * work. If not, see <http://creativecommons.org/licenses/by/4.0/>.
  */
-package cl.uchile.dcc.cc3002.yugioop;
+package cl.uchile.dcc.cc3002.jugi;
 
-import cl.uchile.dcc.cc3002.yugioop.cards.backrow.BackrowCard;
-import cl.uchile.dcc.cc3002.yugioop.cards.monsters.MonsterCard;
+import cl.uchile.dcc.cc3002.jugi.cards.backrow.BackrowCard;
+import cl.uchile.dcc.cc3002.jugi.cards.effects.EffectVisitor;
+import cl.uchile.dcc.cc3002.jugi.cards.monsters.MonsterCard;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -22,7 +23,7 @@ import java.util.stream.Collectors;
  *
  * @author <a href=mailto:ignacio.slater@ug.uchile.cl>Ignacio Slater Muñoz</a>
  */
-public class GameMat {
+public class GameMat implements GameEntity {
   private final Player player;
   private final List<MonsterCard> monsters = new ArrayList<>();
   private final List<BackrowCard> backrow = new ArrayList<>();
@@ -97,5 +98,17 @@ public class GameMat {
     if (backrow.size() < 5) {
       backrow.add(card);
     }
+  }
+
+  @Override
+  public String asString(int indent) {
+    return " ".repeat(indent) + "GameMat{\n"
+           + " ".repeat(indent + 2) +"\n"
+           + " ".repeat(indent) + "}";
+  }
+
+  @Override
+  public void accept(EffectVisitor v) {
+    v.visitMat(this);
   }
 }

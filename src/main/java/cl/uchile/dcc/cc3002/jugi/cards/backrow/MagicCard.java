@@ -3,17 +3,22 @@
 // Creative Commons Attribution 4.0 International License.
 // You should have received a copy of the license along with this
 // work. If not, see <http://creativecommons.org/licenses/by/4.0/>.
-package cl.uchile.dcc.cc3002.yugioop.cards.backrow;
+package cl.uchile.dcc.cc3002.jugi.cards.backrow;
 
-import cl.uchile.dcc.cc3002.yugioop.cards.AbstractCard;
+import cl.uchile.dcc.cc3002.jugi.GameEntity;
+import cl.uchile.dcc.cc3002.jugi.cards.AbstractCard;
+import cl.uchile.dcc.cc3002.jugi.cards.effects.EffectVisitor;
+import org.jetbrains.annotations.NotNull;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Objects;
 
 /**
  * @author <a href=mailto:ignacio.slater@ug.uchile.cl>Ignacio Slater Muñoz</a>
  */
 public class MagicCard extends AbstractCard implements BackrowCard {
-
+  protected List<EffectVisitor> effects = new ArrayList<>();
   public MagicCard(String name) {
     super(name);
   }
@@ -38,5 +43,17 @@ public class MagicCard extends AbstractCard implements BackrowCard {
   @Override
   public MagicCard copy() {
     return new MagicCard(getName());
+  }
+
+  @Override
+  public void accept(EffectVisitor visitor) {
+    visitor.visitMagicCard(this);
+  }
+
+  @Override
+  public void useEffectOn(@NotNull GameEntity target) {
+    for (EffectVisitor visitor: this.effects) {
+      target.accept(visitor);
+    }
   }
 }
