@@ -1,4 +1,4 @@
-package cl.uchile.dcc.cc3002.yugioop.cards.monsters;
+package cl.uchile.dcc.cc3002.jugi.cards.monsters;
 
 import java.util.Objects;
 

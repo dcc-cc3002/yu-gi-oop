@@ -7,6 +7,7 @@
  */
 package cl.uchile.dcc.cc3002.yugioop.cards.monsters;
 
+import cl.uchile.dcc.cc3002.jugi.cards.monsters.ExtraDeckMonsterCard;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.RepeatedTest;
 

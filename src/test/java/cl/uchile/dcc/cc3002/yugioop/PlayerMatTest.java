@@ -7,11 +7,13 @@
  */
 package cl.uchile.dcc.cc3002.yugioop;
 
-import cl.uchile.dcc.cc3002.yugioop.cards.Card;
-import cl.uchile.dcc.cc3002.yugioop.cards.backrow.MagicCard;
-import cl.uchile.dcc.cc3002.yugioop.cards.monsters.ExtraDeckMonsterCard;
-import cl.uchile.dcc.cc3002.yugioop.cards.monsters.MainDeckMonsterCard;
-import cl.uchile.dcc.cc3002.yugioop.cards.monsters.MonsterCard;
+import cl.uchile.dcc.cc3002.jugi.GameMat;
+import cl.uchile.dcc.cc3002.jugi.Player;
+import cl.uchile.dcc.cc3002.jugi.cards.Card;
+import cl.uchile.dcc.cc3002.jugi.cards.backrow.MagicCard;
+import cl.uchile.dcc.cc3002.jugi.cards.monsters.ExtraDeckMonsterCard;
+import cl.uchile.dcc.cc3002.jugi.cards.monsters.MainDeckMonsterCard;
+import cl.uchile.dcc.cc3002.jugi.cards.monsters.MonsterCard;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 

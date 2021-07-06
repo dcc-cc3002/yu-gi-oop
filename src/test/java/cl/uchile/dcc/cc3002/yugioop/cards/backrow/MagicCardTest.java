@@ -1,7 +1,7 @@
 package cl.uchile.dcc.cc3002.yugioop.cards.backrow;
 
+import cl.uchile.dcc.cc3002.jugi.cards.backrow.MagicCard;
 import cl.uchile.dcc.cc3002.yugioop.AbstractNamedElementTest;
-import cl.uchile.dcc.cc3002.yugioop.cards.backrow.MagicCard;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
